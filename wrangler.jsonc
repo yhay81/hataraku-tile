@@ -1,0 +1,37 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "hataraku-tile",
+  "main": "src/worker.tsx",
+  "compatibility_date": "2026-07-26",
+  "workers_dev": true,
+  "preview_urls": false,
+  "observability": {
+    "enabled": true,
+  },
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "run_worker_first": ["/", "/privacy", "/api/*", "/healthz"],
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "hataraku-tile",
+      "database_id": "f2079a80-4bf9-43a6-a653-2c40e4d22a5f",
+      "migrations_dir": "migrations",
+    },
+  ],
+  "ratelimits": [
+    {
+      "name": "WRITE_LIMITER",
+      "namespace_id": "92072611",
+      "simple": {
+        "limit": 30,
+        "period": 60,
+      },
+    },
+  ],
+  "triggers": {
+    "crons": ["41 3 * * *"],
+  },
+}

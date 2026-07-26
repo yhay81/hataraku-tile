@@ -1,0 +1,18 @@
+{
+  "name": "Hataraku Tile",
+  "short_name": "Hataraku",
+  "description": "複数の勤務先とシフト、勤務時間、給与の見込みを端末内でまとめる月間カレンダー。",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f3f1ec",
+  "theme_color": "#27302d",
+  "lang": "ja",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

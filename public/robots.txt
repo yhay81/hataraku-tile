@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hataraku-tile.yusuke8h.workers.dev/sitemap.xml
